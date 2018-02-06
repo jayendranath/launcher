@@ -22,12 +22,20 @@
 				var sApp = startApp.set({
 					"application":"com.example.hello"
 				});
-				alert (sApp);
+				sApp.start(function() { /* success */
+					alert("OK");
+				}, function(error) { /* fail */
+					alert(error);
+				});
 				alert('starting skype');
 				startApp.set({ /* params */
 					"action": "ACTION_VIEW",
 					"uri": "skype:+79109999999"
-				}).start();
+				}).start(function() { /* success */
+					alert("OK");
+				}, function(error) { /* fail */
+					alert(error);
+				});
 			}
 			catch(err){ alert(err);}
 		}
