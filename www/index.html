@@ -19,6 +19,10 @@
 		function launchapp(){
 			try
 			{
+				alert('opening with url scheme');
+				window.open('launchetesting://com.example.hello', '_system');
+				
+				alert('launching with startapp');
 				var sApp = startApp.set({
 					"application":"com.example.hello"
 				});
@@ -27,6 +31,7 @@
 				}, function(error) { /* fail */
 					alert(error);
 				});
+				
 				alert('starting skype');
 				startApp.set({ /* params */
 					"action": "ACTION_VIEW",
@@ -80,8 +85,7 @@
 					<li>This is the sample application for Module 4. </li>
 					<li>This app allows the user to take a picture, cache it, and add it to a carousel of pictures.</li>
 					<!--<button style="height:30px" onclick="window.open('launchetesting://com.example.hello', '_system')">Launch eTesting</button>-->
-					<a href="launchetesting://https://">Open my app</a>
-					<button style="height:50px" onclick="launchapp()">Launch eTesting</button>
+					<button style="height:100px" onclick="launchapp()">Launch eTesting</button>
 				</ul>
         </ul>
 	</div>
@@ -115,7 +119,7 @@
     <script src="scripts/jquery.min.js"></script>
     
     <script src="scripts/kendo.all.min.js"></script>
-    <script type="text/javascript" src="scripts/LaunchMyApp.js"></script>
+    <script src="scripts/LaunchMyApp.js"></script>
 	<script src="scripts/controller.js"></script>
 	<script src="scripts/startApp.js"></script>
 	<script src="scripts/startApp.manually.js"></script>
