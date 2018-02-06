@@ -56,12 +56,9 @@
     <access origin="http://192.168.0.17" subdomains="true" />
     <access origin="http://192.168.0.17:8082" subdomains="true" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
-    <plugin name="cordova-plugin-startapp" source="npm">
-        
-    </plugin>
-	
-	<plugin name="cordova-plugin-customurlscheme" source="npm">
-	  <param name="URL_SCHEME" value="launchetesting" />
-	</plugin>
 
+    <plugin name="cordova-plugin-customurlscheme" source="npm">
+        <param name="URL_SCHEME" value="launchetesting" />
+    </plugin>
+    <plugin name="com.lampa.startapp" source="npm" spec="~0.1.4" />
 </widget>

@@ -16,5 +16,13 @@
     "variables": {
       "URL_SCHEME": "launchetesting"
     }
+  },
+  "com.lampa.startapp": {
+    "source": {
+      "type": "registry",
+      "id": "com.lampa.startapp"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
