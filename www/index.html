@@ -19,8 +19,15 @@
 		function launchapp(){
 			try
 			{
-				alert('trying to launch app');
-				window.open('launchetesting://com.example.hello', '_system')
+				var sApp = startApp.set({
+					"application":"com.example.hello"
+				});
+				alert (sApp);
+				alert('starting skype');
+				startApp.set({ /* params */
+					"action": "ACTION_VIEW",
+					"uri": "skype:+79109999999"
+				}).start();
 			}
 			catch(err){ alert(err);}
 		}
@@ -65,7 +72,7 @@
 					<li>This is the sample application for Module 4. </li>
 					<li>This app allows the user to take a picture, cache it, and add it to a carousel of pictures.</li>
 					<!--<button style="height:30px" onclick="window.open('launchetesting://com.example.hello', '_system')">Launch eTesting</button>-->
-					<a href="launchetesting://Skype">Open my app</a>
+					<a href="launchetesting://https://">Open my app</a>
 					<button style="height:50px" onclick="launchapp()">Launch eTesting</button>
 				</ul>
         </ul>
