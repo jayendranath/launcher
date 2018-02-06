@@ -17,7 +17,12 @@
 	<link href="styles/main.css" rel="stylesheet" /> 
 	<script type="text/javascript">
 		function launchapp(){
-			alert('jayendra');
+			try
+			{
+				alert('trying to launch app');
+				window.open('etestinglaunch://com.example.hello', '_system')
+			}
+			catch(err){ alert(err);}
 		}
 	</script>
 </head>
