@@ -60,7 +60,7 @@
         <variable name="URL_SCHEME" value="launchetesting" />
     </plugin>
 	
-	<plugin name="cordova-plugin-customurlscheme" source="npm" spec="0.1.4">
+	<plugin name="cordova-plugin-customurlscheme" source="npm">
 	  
 	</plugin>
 
