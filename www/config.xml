@@ -59,7 +59,5 @@
 	    <plugin name="cordova-plugin-customurlscheme" spec="https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin.git">
         <variable name="URL_SCHEME" value="etestinglaunch" />
     </plugin>
-	<gap:plugin name="nl.x-services.plugins.launchmyapp">
-	  <param name="URL_SCHEME" value="etestinglaunch" />
-	</gap:plugin>
+
 </widget>
