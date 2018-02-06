@@ -57,11 +57,11 @@
     <access origin="http://192.168.0.17:8082" subdomains="true" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
     <plugin name="cordova-plugin-startapp" source="npm">
-        <variable name="URL_SCHEME" value="launchetesting" />
+        
     </plugin>
 	
 	<plugin name="cordova-plugin-customurlscheme" source="npm">
-	  
+	  <param name="URL_SCHEME" value="launchetesting" />
 	</plugin>
 
 </widget>
