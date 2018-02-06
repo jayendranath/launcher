@@ -56,4 +56,10 @@
     <access origin="http://192.168.0.17" subdomains="true" />
     <access origin="http://192.168.0.17:8082" subdomains="true" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
+	    <plugin name="cordova-plugin-customurlscheme" spec="https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin.git">
+        <variable name="URL_SCHEME" value="etestinglaunch" />
+    </plugin>
+	<gap:plugin name="nl.x-services.plugins.launchmyapp">
+	  <param name="URL_SCHEME" value="etestinglaunch" />
+	</gap:plugin>
 </widget>
