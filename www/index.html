@@ -26,7 +26,7 @@
 				var sApp = startApp.set({
 					"application":"com.example.hello"
 				});
-				sApp.start(function() { /* success */
+				sApp.check(function() { /* success */
 					alert("OK");
 				}, function(error) { /* fail */
 					alert(error);
@@ -36,7 +36,7 @@
 				startApp.set({ /* params */
 					"action": "ACTION_VIEW",
 					"uri": "skype:+79109999999"
-				}).start(function() { /* success */
+				}).check(function() { /* success */
 					alert("OK");
 				}, function(error) { /* fail */
 					alert(error);
