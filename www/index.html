@@ -20,27 +20,26 @@
 			try
 			{
 				alert('opening with url scheme');
-				window.open('launchetesting://com.example.hello', '_system');
+				window.open('com.example.hello://', '_system');
 				
-				alert('launching with startapp');
-				var sApp = startApp.set({
-					"application":"com.example.hello"
+				var sApp = startApp.set({ /* params */
+					"action":"ACTION_RUN",
+					"package":"com.example.hello",
+					"intentstart":"startActivity"
+					}, { /* extras */
 				});
-				sApp.check(function() { /* success */
-					alert("OK");
-				}, function(error) { /* fail */
-					alert(error);
+				sApp.check(function(values) { /* success */
+					console.log(values)
+					}, function(error) { /* fail */
+						alert("Firefox is missing. Now we proceed to install it");
+						window.open('https://play.google.com/store/apps/details?id=org.mozilla.firefox', '_system', 'location=no');
+				});
+				sApp.start(function() { /* success */
+					console.log(values)
+					}, function(error) { /* fail */
+					//            alert(error);
 				});
 				
-				alert('starting skype');
-				startApp.set({ /* params */
-					"action": "ACTION_VIEW",
-					"uri": "skype:+79109999999"
-				}).check(function() { /* success */
-					alert("OK");
-				}, function(error) { /* fail */
-					alert(error);
-				});
 			}
 			catch(err){ alert(err);}
 		}

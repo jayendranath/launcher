@@ -58,7 +58,7 @@
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
 
     <plugin name="cordova-plugin-customurlscheme" source="npm">
-        <param name="URL_SCHEME" value="launchetesting" />
+        <param name="URL_SCHEME" value="com.example.hello" />
     </plugin>
     <plugin name="com.lampa.startapp" source="npm" spec="~0.1.4" />
 </widget>
