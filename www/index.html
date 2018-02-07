@@ -20,11 +20,11 @@
 			try
 			{
 				alert('opening with url scheme');
-				window.open('com.example.hello://', '_system');
+				window.open('fsietestingapp://', '_system');
 				
 				var sApp = startApp.set({ /* params */
 					"action":"ACTION_RUN",
-					"package":"com.example.hello",
+					"package":"com.fsi.labetesting",
 					"intentstart":"startActivity"
 					}, { /* extras */
 				});
@@ -37,7 +37,7 @@
 				sApp.start(function() { /* success */
 					console.log(values)
 					}, function(error) { /* fail */
-					//            alert(error);
+					alert(error);
 				});
 				
 			}
@@ -72,7 +72,7 @@
 
 		<div data-role="footer">
 			<div data-role="tabstrip">
-				<a id="btnAddPic" data-role="button" data-icon="add" onclick="window.open('launchetesting://com.example.hello', '_system')"></a>
+				<a id="btnAddPic" data-role="button" data-icon="add" onclick="window.open('fsietestingapp://', '_system')"></a>
 			</div>
 		</div>
 	</div>
@@ -85,6 +85,7 @@
 					<li>This app allows the user to take a picture, cache it, and add it to a carousel of pictures.</li>
 					<!--<button style="height:30px" onclick="window.open('launchetesting://com.example.hello', '_system')">Launch eTesting</button>-->
 					<button style="height:100px" onclick="launchapp()">Launch eTesting</button>
+					<a href="fsietestingapp://">Open testing app</a>
 				</ul>
         </ul>
 	</div>
